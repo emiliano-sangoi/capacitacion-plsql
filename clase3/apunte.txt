@@ -1,0 +1,34 @@
+Apunte Clase 3
+---------------------------------------------------------------
+
+
+En Equipo\HKEY_LOCAL_MACHINE\SOFTWARE\ORACLE\KEY_XE cambiar ORA_XE_AUTOSTART a FALSE
+
+En services:
+OracleServiceXE
+OracleXETNSListener
+estan en ejecucion
+
+Setear la variable
+set ORACLE_SID=XE
+
+sqlplus / as sysdba
+
+Si dice "instancia inactiva" ejecutar:
+> startup
+
+Para bajar la base de datos:
+shutdown immediate
+
+--- Verificas que exista la posición 48
+IF(lt_nombres.EXISTS(48)) THEN
+dbms_output.put_line('Si existe');
+ELSE
+dbms_output.put_line('NO Existe');
+END IF;
+
+-------------------------------------------------------
+F9 ejecutar
+
+not in = distinto all
+cuidado que la subconsulta no devuelva un null

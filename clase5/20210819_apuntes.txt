@@ -1,0 +1,45 @@
+Clase 5 - Apuntes
+=========================================================================
+Utilizacion del rowcount
+
+El where se ejecuta primero y luego sobre ese set se hace el order by luego se debe aplicar el corte o rowcount
+Esto se resuelve con una consulta en la clausula FROM.
+
+
+CURSORES
+Un cursor es un area de memoria que guarda el resultado de un select.
+Se dividen en implicito y explicitos.
+
+Posee atributos
+%FOUND
+SQL%FOUND -> si esa sentencia fue exitosa entonces devuelve true.
+
+%ISOPEN
+Devuelve true si el cursor esta abierto (siempre false en cursores implicitos)
+
+%NOTFOUND
+Si es null quiere decir que no devolvio nada el cursor.
+
+%ROWCOUNT
+Implicitos: cantidad de filas afectadas
+Explicitos: fila actual, en el ultimo item es igual al de explicito.
+
+Cursores implicitos
+Manejados internamente por oracle, no hay mucho misterio
+
+Cursores explicitos
+Declarar -> abrir -> fetch -> vacio? -> close
+
+> Open
+	Asigna memoria
+	Inicializa los parametros
+	Identifica el conjunto de filas 
+	...
+
+OPEN cursor(...);
+
+> Fetch
+FETCH cursor 
+
+> Close
+Nombre cursor
