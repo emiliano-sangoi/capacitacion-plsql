@@ -1,0 +1,6 @@
+Objetos de bases de datos
+
+VISTAS
+Vistas materializadas son vistas en donde el sql se ejecuta en determinado momento 
+Permite indices.
+El problema es la volatilidad de la información.
